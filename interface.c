@@ -202,7 +202,6 @@ void menu(Peca **matriz, int *m, int *n, int num_jog, char **nomes, int cheatmod
     puxar_pecas(pecas[i], usadas);
   }
   
-  //Limpar o buffer.
   while(1){
     //Verificar se o jogo ja acabou.
     fim_de_jogo(usadas, nomes, num_jog, pontos);
@@ -232,9 +231,6 @@ void menu(Peca **matriz, int *m, int *n, int num_jog, char **nomes, int cheatmod
     //Retira todas as palavras individuais da string.
     int count_palavras = 0;
     char **palavra = get_palavras(entrada, &count_palavras);
-
-    //Imprime o tabuleiro.
-    print_tabuleiro(matriz_, *m, *n);
 
     //Primeiro caracter valido (!= ' '), que indica se o jogador ira jogar, passar ou trocar.
     char e = palavra[0][0];
